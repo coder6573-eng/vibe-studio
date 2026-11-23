@@ -1,4 +1,4 @@
-# ◆ Vibe Studio
+# ◆ Vibe Agent
 
 A keyless terminal coding agent. It reads your code, edits files, runs commands and keeps going until the task is done — with no API key, no runtime dependencies and no config file.
 
@@ -18,7 +18,7 @@ A keyless terminal coding agent. It reads your code, edits files, runs commands 
 ◆ Added GET /health with a JSON status payload and a matching test. All tests pass.
 ```
 
-## Why Vibe Studio
+## Why Vibe Agent
 
 - **Keyless by default.** It talks to the [Kilo AI Gateway](https://kilo.ai/docs/gateway) anonymously and uses `kilo-auto/free`, which routes to a free model per session. No signup, no credit card, 200 requests/hour per IP.
 - **Zero runtime dependencies.** Node 22.18+ runs the TypeScript directly. No build step, no `node_modules` at runtime, no SDK.
@@ -138,7 +138,7 @@ Every path is resolved inside the workspace root; `../` escapes are rejected. De
 
 ## Sessions
 
-Sessions are saved to `~/.vibe-studio/sessions/<id>.json` after every turn, so a crash or `Ctrl+C` never loses the conversation.
+Sessions are saved to `~/.vibeagent/sessions/<id>.json` after every turn, so a crash or `Ctrl+C` never loses the conversation.
 
 ```bash
 vibe --continue        # latest session for this directory
@@ -155,7 +155,7 @@ vibe --resume 20261121-212630-uyi2
 | `VIBE_MODE` | `build` |
 | `VIBE_YOLO` | `0` |
 
-Copy `.env.example` if you prefer a file; Vibe Studio reads the environment, so `export` or your shell's env loader works too.
+Copy `.env.example` if you prefer a file; Vibe Agent reads the environment, so `export` or your shell's env loader works too.
 
 ## How it works
 
@@ -165,7 +165,7 @@ src/
   agent.ts      the tool loop, context compaction, usage tracking
   provider.ts   OpenAI-compatible streaming client (SSE, retries, tool calls)
   prompt.ts     system prompt with a workspace snapshot
-  session.ts    JSON session persistence in ~/.vibe-studio
+  session.ts    JSON session persistence in ~/.vibeagent
   tools/        read, write, edit, list, grep, shell, plan
   ui.ts         colors, diff rendering, spinner — no dependencies
 ```

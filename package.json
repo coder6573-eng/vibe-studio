@@ -29,12 +29,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coder6573-eng/vibeagent.git"
+    "url": "git+https://github.com/coder6573-eng/vibe-studio.git"
   },
   "bugs": {
-    "url": "https://github.com/coder6573-eng/vibeagent/issues"
+    "url": "https://github.com/coder6573-eng/vibe-studio/issues"
   },
-  "homepage": "https://github.com/coder6573-eng/vibeagent#readme",
+  "homepage": "https://github.com/coder6573-eng/vibe-studio#readme",
   "files": [
     "src",
     "README.md",
